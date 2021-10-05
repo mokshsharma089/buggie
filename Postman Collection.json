@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "179f2c14-9f0e-41e8-8614-3af34e4e7f43",
+		"name": "Angular Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/employee/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"name\":\"Natasha\",\n    \"Address\":\"7/46 B Oswal Puram, Delhi-02\",\n    \"salary\":2000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/employee/create"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/employee/all"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/id/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/employee/id/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"name\":\"Natasha Oswal\",\n    \"Address\":\"7/46 B Oswal Puram, Delhi-02\",\n    \"salary\":80\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/employee/update"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/employee/delete/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/employee/delete/1"
+			},
+			"response": []
+		}
+	]
+}
