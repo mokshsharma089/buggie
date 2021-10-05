@@ -1,0 +1,5 @@
+<p>delete-employee works!</p>
+<h2><span style="color:blue">{{message}}</span></h2>
+<label> Enter Id for Employee to be deleted </label>
+<input type="text" #input>
+<button (click)="deleteEmployee(input.value)" >Delete {{employeeToBeDeleted}}</button>

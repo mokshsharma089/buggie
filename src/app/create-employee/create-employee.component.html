@@ -1,0 +1,48 @@
+<p>create-employee works!</p>
+<!-- <button (click)="createEmployee()">Create Natasha</button>
+{{message}} -->
+
+<h2><span style="color:blue">{{message}}</span></h2>
+<form [formGroup]="employeeForm" (ngSubmit)="OnSubmit()">
+    <div>
+        <label> Enter Id</label>
+        <br>
+        <input type="text" formControlName="id">
+        <span *ngIf="employeeForm.controls.id.errors && employeeForm.controls.id.touched"
+         style="color:red"> 
+         ID is required field
+        </span>
+    </div>
+    <br><hr>
+    <div>
+        <label> Enter Name</label>
+        <br>
+        <input type="text" formControlName="name">
+        <span *ngIf="employeeForm.controls.name.errors && employeeForm.controls.name.touched"
+         style="color:red"> 
+         name is required field
+        </span>
+    </div>
+    <br><hr>
+    <div>
+        <label> Enter Address</label>
+        <br>
+        <input type="text" formControlName="Address">
+        <span *ngIf="employeeForm.controls.Address.errors && employeeForm.controls.Address.touched"
+         style="color:red"> 
+         Address is required field
+        </span>
+    </div>
+    <br><hr>
+    <div>
+        <label> Enter salary</label>
+        <br>
+        <input type="text" formControlName="salary">
+        <span *ngIf="employeeForm.controls.salary.errors && employeeForm.controls.salary.touched"
+         style="color:red"> 
+         salary is required field
+        </span>
+    </div>
+    <br><hr>
+    <button type="submit" [disabled]="!employeeForm.valid">Submit</button>
+</form>

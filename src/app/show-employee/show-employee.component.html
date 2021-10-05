@@ -1,0 +1,34 @@
+<p>show-employee works!</p>
+
+<!-- uncomment below given code to see all employees present in DB -->
+<!-- <ul>
+    <li *ngFor="let e of employees">{{e|json}}</li>
+</ul> -->
+
+
+<br>
+<hr>
+<br>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Salary</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employees">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.Address}}</td>
+            <td>{{e.salary}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<button (click)="getAllIds()">Click to see IDs</button>
+<br>
+<select [(ngModel)]="selectedId" (change)="idSelected()">
+    <option [value]="id" *ngFor="let id of employeeIds">{{id}}</option>
+</select>
+
